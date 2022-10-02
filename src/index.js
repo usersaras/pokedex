@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <nav className="bg-dark">
-        <h1 className="text-white px-5 py-3"><a href="/" className="text-decoration-none text-white">Pokedex</a></h1>
+        <h1 className="text-white px-5 py-3"><a href="/pokedex" className="text-decoration-none text-white">Pokedex</a></h1>
     </nav>
     <BrowserRouter>
     <Routes>

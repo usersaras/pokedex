@@ -50,8 +50,8 @@ export default function IndividualComponent() {
             <div>
             <h1>{pokemonStats.name}</h1>
             <p className="mb-0">
-                {pokemonStats.types.map(ability => {
-                    return <div className={`type-${ability.type.name} d-inline me-1 px-2 py-1 rounded-pill text-white m-0 first-letter-capital`}>{ability.type.name}</div>
+                {pokemonStats.types.map((ability, index) => {
+                    return <div key={index} className={`type-${ability.type.name} d-inline me-1 px-2 py-1 rounded-pill text-white m-0 first-letter-capital`}>{ability.type.name}</div>
                 })}
             </p> 
             <p className="mb-0 mt-2"><span class="fw-bold">Height:</span> {pokemonStats.height.toString().length>1 ? pokemonStats.height.toString().slice(0,1)+"."+pokemonStats.height.toString().slice(-1 ) : "0."+pokemonStats.height.toString()}m, 
@@ -70,8 +70,8 @@ export default function IndividualComponent() {
         <div className="tab-content" id="nav-tabContent">
             <div className="tab-pane fade show active px-3 py-4 bg-white border border-top-0 rounded-bottom" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                 <div className="d-flex flex-column gap-3">
-                    {pokemonStats.stats.map(stat => {
-                        return <div>
+                    {pokemonStats.stats.map((stat, index) => {
+                        return <div key={index}>
                             
                             <p className="mb-0 first-letter-capital">{stat.stat.name}</p>
                             <div className="progress">
@@ -83,8 +83,8 @@ export default function IndividualComponent() {
             </div>
             <div className="tab-pane fade px-3 py-4 bg-white border border-top-0 rounded-bottom" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                 <div className="row g-3">
-                    {pokemonStats.moves.sort().map(move => {
-                        return <div className="col-sm-3">
+                    {pokemonStats.moves.sort().map((move,index) => {
+                        return <div key={index} className="col-sm-3">
                             <div className="bg-light p-2 rounded">
                                 <p className="mb-0 text-center first-letter-capital">{move.move.name.replace("-", " ")}</p>
                             </div>
@@ -94,8 +94,8 @@ export default function IndividualComponent() {
             </div>
             <div className="tab-pane fade px-3 py-4 bg-white border border-top-0 rounded-bottom" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
             <div className="row g-3">
-                    {pokemonStats.abilities.map(ability => {
-                        return <div className="col-sm-3">
+                    {pokemonStats.abilities.map((ability,index) => {
+                        return <div key={index} className="col-sm-3">
                             <div className="bg-light p-2 rounded">
                                 <p className="mb-0 text-center first-letter-capital">{ability.ability.name}</p>
                             </div>
@@ -105,8 +105,8 @@ export default function IndividualComponent() {
             </div>
             <div className="tab-pane fade px-3 py-4 bg-white border border-top-0 rounded-bottom" id="nav-encounters" role="tabpanel" aria-labelledby="nav-encounters-tab">
             <div className="row g-3">
-                    {pokemonStats.encounters.map(encounter => {
-                        return <div className="col-sm-3">
+                    {pokemonStats.encounters.map((encounter,index) => {
+                        return <div key={index} className="col-sm-3">
                             <div className="bg-light p-2 rounded">
                                 <p className="mb-0 text-center first-letter-capital">{encounter.location_area.name.replace("-", " ").replace("-", " ")}</p>
                             </div>
