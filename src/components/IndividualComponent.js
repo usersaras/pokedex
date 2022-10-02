@@ -54,8 +54,8 @@ export default function IndividualComponent() {
                     return <div key={index} className={`type-${ability.type.name} d-inline me-1 px-2 py-1 rounded-pill text-white m-0 first-letter-capital`}>{ability.type.name}</div>
                 })}
             </p> 
-            <p className="mb-0 mt-2"><span class="fw-bold">Height:</span> {pokemonStats.height.toString().length>1 ? pokemonStats.height.toString().slice(0,1)+"."+pokemonStats.height.toString().slice(-1 ) : "0."+pokemonStats.height.toString()}m, 
-            <span class="fw-bold">Weight:</span> {pokemonStats.weight.toString().slice(0,-1)+"."+pokemonStats.weight.toString().slice(-1)}kgs</p>
+            <p className="mb-0 mt-2"><span className="fw-bold">Height:</span> {pokemonStats.height.toString().length>1 ? pokemonStats.height.toString().slice(0,1)+"."+pokemonStats.height.toString().slice(-1 ) : "0."+pokemonStats.height.toString()}m, 
+            <span className="fw-bold">Weight:</span> {pokemonStats.weight.toString().slice(0,-1)+"."+pokemonStats.weight.toString().slice(-1)}kgs</p>
             </div>
         </div>
 
