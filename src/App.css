@@ -1,38 +1,162 @@
-.App {
-  text-align: center;
+:root {
+  --normal: #A9A978;
+  --fire: #F0812C;
+  --water: #6892F1;
+  --grass: #79CA4F;
+  --electric: #F8D12D;
+  --ice: #99D9D9;
+  --fighting: #C12D24;
+  --poison: #A13EA1;
+  --ground: #E1C168;
+  --flying: #A992F0;
+  --psychic: #F85789;
+  --bug: #A9B91A;
+  --rock: #B9A235;
+  --ghost: #705799;
+  --dragon: #7044F9;
+  --dark: #705746;
+  --steel: #BAB9D2;
+  --fairy: #FF9CE2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.type-normal{
+  background-color: var(--normal);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.type-fire{
+  background: var(--fire);
 }
 
-.App-link {
-  color: #61dafb;
+.type-water{
+  background: var(--water);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.type-grass{
+  background: var(--grass);
 }
+
+.type-electric{
+  background: var(--electric);
+}
+
+.type-ice{
+  background: var(--ice);
+}
+
+.type-fighting{
+  background: var(--fighting);
+}
+
+.type-poison{
+  background: var(--poison);
+}
+
+.type-ground{
+  background: var(--ground);
+}
+
+.type-flying{
+  background: var(--flying);
+}
+
+.type-psychic{
+  background: var(--psychic);
+}
+
+.type-bug{
+  background: var(--bug);
+}
+
+.type-rock{
+  background: var(--rock);
+}
+
+.type-ghost{
+  background: var(--ghost);
+}
+
+.type-dragon{
+  background: var(--dragon);
+}
+
+.type-dark{
+  background: var(--dark);
+}
+
+.type-steel{
+  background: var(--steel);
+}
+
+.type-fairy{
+  background: var(--fairy);
+}
+
+.type-dark{
+  background: var(--dark);
+}
+
+.type-all{
+  background: grey;
+}
+
+.stat-hp{
+  background: green;
+}
+
+.stat-attack{
+  background: red;
+}
+
+.stat-defense{
+  background: blue;
+}
+
+.stat-speed{
+  background: yellow;
+}
+
+.first-letter-capital::first-letter{
+  text-transform: uppercase;
+}
+
+h1::first-letter, h3::first-letter{
+  text-transform: uppercase;
+}
+
+.infinite-scroll-component{
+
+ display: grid;
+ grid-template-columns: repeat(1, 1fr);
+ gap: 10px;
+  
+}
+
+.poke-image img{
+  transition: 0.3s;
+}
+
+.poke-box{
+  filter: drop-shadow(1px 1px 1px grey) !important;
+}
+
+.poke-image{
+
+}
+
+.poke-image:hover{
+  background: black; 
+  filter: drop-shadow(30px 10px 4px #4444dd);
+}
+
+.poke-image:hover img{
+  transform: scale(1.5);
+  transition: 0.3s;
+  margin-right: 20px;
+  background: black !important;
+}
+
+

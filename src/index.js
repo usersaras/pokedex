@@ -1,13 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import './index.css';
 import App from './App';
+import IndividualPokemon from './components/IndividualComponent'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
-    <App />
+    <nav className="bg-dark">
+        <h1 className="text-white px-5 py-3"><a href="/" className="text-decoration-none text-white">Pokedex</a></h1>
+    </nav>
+    <BrowserRouter>
+    <Routes>
+    <Route path='/' element={<App />} />
+    <Route path='/pokemon/:id' element={<IndividualPokemon />} />
+    </Routes>
+    </BrowserRouter>
+    
   </React.StrictMode>
 );
 
