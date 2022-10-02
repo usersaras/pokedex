@@ -222,7 +222,7 @@ function App() {
           //returns this block if state.filtered is false
           //returns all pokemons irrespective of type
           newPokemons.map((pokemon) => {
-            return <div key={pokemon.id} className="col-lg-4" onClick={() => { window.location = `pokemon/${pokemon.id}` }}>
+            return <div key={pokemon.id} className="col-lg-4" onClick={() => { window.location.href = `/pokedex/pokemon/${pokemon.id}` }}>
               <div className="bg-dark rounded rounded-3 overflow-hidden poke-box">
                 <Pokemon key={pokemon.id} id={pokemon.id} pokemon={pokemon} ></Pokemon>
               </div>
